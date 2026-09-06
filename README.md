@@ -1,8 +1,24 @@
 # WhatsApp Networking Hub
 
-Convierte el chat de tu comunidad de WhatsApp en un directorio de networking profesional — **sin servidores, sin cuentas, sin subir tus datos a ningún lado.**
+<p align="left">
+  <strong>Client-Side WhatsApp Chat Log Parser & Community Networking Directory</strong><br>
+  Open-Source Software by <a href="https://github.com/iamhuitron"><strong>Ian Miguel Delgado Huitrón</strong></a> · Co-Founder at <a href="https://github.com/Xaol-Studio"><strong>@Xaol-Studio</strong></a>
+</p>
 
-## Qué es
+<p align="left">
+  <a href="https://whatsapp-networking-hub.vercel.app"><img src="https://img.shields.io/badge/Live_App-whatsapp--networking--hub.vercel.app-059669?style=flat-square&logo=vercel&logoColor=white" alt="Live App" /></a>
+  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/Author-@iamhuitron-1e293b?style=flat-square&logo=github&logoColor=white" alt="Author" /></a>
+  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/Studio-@Xaol--Studio-059669?style=flat-square&logo=github&logoColor=white" alt="Studio" /></a>
+  <img src="https://img.shields.io/badge/Tests-39%20Passing%20(Vitest)-emerald?style=flat-square" alt="Tests" />
+  <img src="https://img.shields.io/badge/Privacy-100%25%20In--Memory%20(Zero%20Server)-blue?style=flat-square" alt="Privacy" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" /></a>
+</p>
+
+> Convierte el chat de tu comunidad de WhatsApp en un directorio de networking profesional — **sin servidores, sin cuentas, sin subir tus datos a ningún lado.**
+
+---
+
+## 📌 Qué es
 
 Una aplicación web para grupos de WhatsApp (comunidades, cohortes, meetups) que transforma los mensajes donde la gente comparte su carrera, universidad, trabajo, ciudad y redes sociales en un directorio buscable, para facilitar hacer networking real dentro del grupo.
 
@@ -49,7 +65,7 @@ Detalles técnicos:
 Requiere Node.js 18+.
 
 ```bash
-git clone https://github.com/<tu-usuario>/whatsapp-networking-hub.git
+git clone https://github.com/iamhuitron/whatsapp-networking-hub.git
 cd whatsapp-networking-hub
 npm install
 npm run dev
@@ -62,8 +78,8 @@ Otros comandos útiles:
 ```bash
 npm run lint       # ESLint
 npm run typecheck  # TypeScript sin emitir archivos
-npm run test       # Vitest
-npm run build       # Build de producción (export estático)
+npm run test       # Vitest (39 pruebas unitarias)
+npm run build      # Build de producción (export estático)
 ```
 
 ## Cómo desplegar en Vercel
@@ -74,11 +90,11 @@ npm run build       # Build de producción (export estático)
 
 ## Cómo desplegar en GitHub Pages
 
-El proyecto está configurado con `output: "export"` en `next.config.ts`, por lo que genera un sitio 100% estático en `/out`, compatible con GitHub Pages.
+El proyecto está configurado con `output: "export"` en `next.config.mjs`, por lo que genera un sitio 100% estático en `/out`, compatible con GitHub Pages.
 
 1. En **Settings → Pages** del repositorio, selecciona la fuente **GitHub Actions**.
 2. El workflow incluido en `.github/workflows/deploy-pages.yml` construye el sitio y lo publica automáticamente en cada push a `main`.
-3. Si el repositorio se sirve desde una subruta (`https://usuario.github.io/whatsapp-networking-hub/`), el workflow define automáticamente `NEXT_PUBLIC_BASE_PATH` para que las rutas internas funcionen correctamente.
+3. Si el repositorio se sirve desde una subruta (`https://iamhuitron.github.io/whatsapp-networking-hub/`), el workflow define automáticamente `NEXT_PUBLIC_BASE_PATH` para que las rutas internas funcionen correctamente.
 
 ## Cómo contribuir
 
@@ -89,7 +105,10 @@ El proyecto está configurado con `output: "export"` en `next.config.ts`, por lo
 
 ## Estado del proyecto
 
-El proyecto se desarrolla por fases (ver `CONTRIBUTING` / issues del repo). El parser definitivo de WhatsApp (`lib/parser/whatsapp-parser.ts`) se implementa a partir del análisis de exports reales anonimizados, y aún no está completo en esta versión inicial.
+- ✅ **Parser de WhatsApp (`lib/parser/whatsapp-parser.ts`):** 100% implementado y probado con 39 pruebas unitarias automatizadas. Soporta formatos oficiales de exportación de Android e iOS (marcas de tiempo con o sin segundos, AM/PM, locales en español e inglés).
+- ✅ **Manejo de Mensajes Multilínea:** Agrupación automática de líneas de continuación sin pérdida de saltos de línea.
+- ✅ **Filtrado de Mensajes de Sistema:** Detección de mensajes de cifrado, cambios de grupo y entradas/salidas de participantes.
+- ✅ **Construcción y Deduplicación de Perfiles:** Extracción de enlaces a LinkedIn, GitHub, Instagram y portafolios personales.
 
 ## Licencia
 
