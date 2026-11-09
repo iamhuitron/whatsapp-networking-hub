@@ -6,15 +6,26 @@
 </p>
 
 <p align="left">
-  <a href="https://whatsapp-networking-hub.vercel.app"><img src="https://img.shields.io/badge/Live_App-whatsapp--networking--hub.vercel.app-059669?style=flat-square&logo=vercel&logoColor=white" alt="Live App" /></a>
-  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/Author-@iamhuitron-1e293b?style=flat-square&logo=github&logoColor=white" alt="Author" /></a>
-  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/Studio-@Xaol--Studio-059669?style=flat-square&logo=github&logoColor=white" alt="Studio" /></a>
-  <img src="https://img.shields.io/badge/Tests-39%20Passing%20(Vitest)-emerald?style=flat-square" alt="Tests" />
-  <img src="https://img.shields.io/badge/Privacy-100%25%20In--Memory%20(Zero%20Server)-blue?style=flat-square" alt="Privacy" />
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" /></a>
+  <a href="https://whatsapp-networking-hub.vercel.app"><img src="https://img.shields.io/badge/LIVE_APP-whatsapp--networking--hub.vercel.app-B89758?style=for-the-badge&logo=vercel&logoColor=FAF8F5&labelColor=141210" alt="Live App" /></a>
+  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/AUTHOR-@iamhuitron-1D1A16?style=for-the-badge&logo=github&logoColor=D4B87A&labelColor=141210" alt="Author" /></a>
+  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/STUDIO-@Xaol--Studio-1D1A16?style=for-the-badge&logo=github&logoColor=D4B87A&labelColor=141210" alt="Studio" /></a>
+</p>
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Tests-39_Passing_(Vitest)-1B3B2B?style=flat-square&logo=vitest&logoColor=D4B87A&labelColor=141210" alt="Tests" />
+  <img src="https://img.shields.io/badge/Privacy-100%25_In--Memory_(Zero_Server)-1B3B2B?style=flat-square&labelColor=141210&logoColor=D4B87A" alt="Privacy" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-1D1A16?style=flat-square&labelColor=141210&logoColor=D4B87A" alt="License" /></a>
 </p>
 
 > Convierte el chat de tu comunidad de WhatsApp en un directorio de networking profesional — **sin servidores, sin cuentas, sin subir tus datos a ningún lado.**
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#141210', 'primaryTextColor': '#FAF8F5', 'primaryBorderColor': '#B89758', 'lineColor': '#B89758', 'secondaryColor': '#1D1A16', 'tertiaryColor': '#0D0C0A', 'mainBkg': '#141210', 'nodeBorder': '#B89758', 'clusterBkg': '#0D0C0A', 'clusterBorder': '#262420', 'titleColor': '#D4B87A', 'edgeLabelBackground': '#141210', 'fontFamily': 'JetBrains Mono, Plus Jakarta Sans, sans-serif' }}}%%
+flowchart LR
+    A["Exported WhatsApp .txt"] -->|Browser FileReader API| B["Deterministic Chat Parser<br/>(Android / iOS / Multiline)"]
+    B --> C["Entity & Social Extractor<br/>(LinkedIn · GitHub · Instagram · Role)"]
+    C --> D["Local IndexedDB Directory<br/>(Search · Networking Session · CSV/XLSX)"]
+```
 
 ---
 
